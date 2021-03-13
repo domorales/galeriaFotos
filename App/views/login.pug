@@ -1,0 +1,48 @@
+extends ./layout
+block content
+
+    header
+        div.container
+            div.row.justify-content-end
+                input#check_theme(type="checkbox", name="check_theme")
+                label.switch(for="check_theme")
+    div.container
+        div.row.justify-content-center.align-items-center.container_login
+            div.col-9.col-sm-8.col-md-5.col-lg-4.card_login.align-items-center(data-dark)
+                form#form_login(action="/login", method="post")
+                    h1.text-center Login
+                    div.input-group
+                        input.input_login.mx-auto(type="email", name="user" placeholder="Correo" required)
+                    div.input-group
+                        input.input_login(type="password", name="pass" placeholder="Contraseña" required)
+                    div.input-group
+                       a(href="/register") Registrarse
+                    div.input-group
+                        input.btn_login.btn.btn-success(type="submit", value="Iniciar Sesión")
+                div.cotainer_app_login.d-flex
+                    form#form_login_google(action="/login" method="post") 
+                        div.input-group
+                            button.login_google(type="submit")
+                                i.fab.fa-google
+                    form#form_login_fb(action="/login" method="post") 
+                        div.input-group
+                            button.login_fb(type="submit")
+                                i.fab.fa-facebook-f
+    if(error!="")
+        <div id="mostrarmodal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content bg-danger text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title">Error</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    p=error
+                </div>
+            </div>
+            </div>
+        </div>
+
+    script(src="js/login.js" type="module")

@@ -1,0 +1,128 @@
+body {
+	font-size: 16px;
+}
+
+/*ESTILOS PARA LOGIN*/
+.container_login {
+	height: 100vh;
+}
+.input_login {
+	margin: 1rem auto;
+	border: 1px solid rgb(51, 49, 49);
+	border-radius: 0.7rem;
+	width: 15rem;
+	height: 2rem;
+}
+.btn_login {
+	margin: 1rem auto;
+}
+
+.card_login {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 23rem;
+	box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0.46);
+	border-radius: 1rem;
+}
+
+.fab,
+.fas {
+	padding-top: 7px;
+	font-size: 27px;
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	text-align: center;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+.input-group {
+	display: flex;
+	justify-content: center;
+}
+
+.fa-facebook-f {
+	background: #3b5998;
+	color: white;
+}
+
+.fa-envelope {
+	background-color: black;
+	color: white;
+}
+
+.fa-google {
+	background: #dd4b39;
+	color: white;
+	transition: opacity 0.4s;
+}
+
+.fa-google:hover {
+	opacity: 0.8;
+}
+
+.card_register {
+	display: flex;
+	justify-content: center;
+	height: 31rem;
+	box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0.46);
+	border-radius: 1rem;
+}
+
+button {
+	border: 0;
+	outline: none;
+	background-color: transparent;
+}
+
+button:focus {
+	outline: 0 !important;
+}
+
+.switch {
+	margin: 1rem;
+	position: relative;
+	width: 4rem;
+	height: 2rem;
+	border-radius: 2rem;
+	border: 0.1rem solid black;
+	background-color: black;
+	transition: 0.4s ease;
+}
+
+.switch::after {
+	content: '';
+	position: absolute;
+	width: 2rem;
+	height: 1.9rem;
+	border-radius: 100%;
+	background-color: rgb(255, 255, 255);
+	transition: 0.4s ease;
+}
+
+#check_theme {
+	display: none;
+}
+
+#check_theme:checked + .switch::after {
+	transform: translateX(2rem);
+	background-color: black;
+}
+
+#check_theme:checked + .switch {
+	background-color: white;
+}
+
+.dark {
+	background-color: black;
+	color: white;
+	transition: 2s ease ease;
+	border-radius: 1rem;
+}
+
+.body_dark {
+	background-color: rgb(27, 27, 27);
+	color: white;
+}

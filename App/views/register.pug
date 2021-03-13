@@ -1,0 +1,44 @@
+extends ./layout
+block content
+    if(error!="")
+        <div id="mostrarmodal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content bg-danger text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title">Error</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    p=error
+                </div>
+                </div>
+            </div>
+        </div>
+    header
+        div.container
+            div.row.justify-content-end
+                input#check_theme(type="checkbox", name="check_theme")
+                label.switch(for="check_theme")
+    div.container
+        div.row.justify-content-center.align-items-center.container_login
+            div.col-9.col-sm-8.col-md-5.col-lg-4.card_register.align-items-center(data-dark)
+                form#form_register(action="/register", method="post")
+                    h1.text-center Registro
+                    div.input-group
+                        input.input_login.mx-auto(type="text", name="name" placeholder="Nombre" required)
+                    div.input-group
+                        input.input_login.mx-auto(type="text", name="last_name" placeholder="Apellido" required)
+                    div.input-group
+                        input.input_login.mx-auto(type="email", name="user" placeholder="Correo" required)
+                    div.input-group
+                        input.input_login(type="password", name="pass" placeholder="Contraseña de 8 caracteres" , pattern=".{8,}",required)
+                    div.input-group
+                        a(href="/") Iniciar Sesión
+                    div.input-group
+                        input.btn_login.btn.btn-success(type="submit", value="Registrarse")
+    
+            
+    
+    
